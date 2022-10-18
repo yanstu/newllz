@@ -1,0 +1,84 @@
+{
+  "pages": [
+    {
+      "path": "pages/home/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "navigationBarBackgroundColor": "#47aaff"
+      }
+    },
+    {
+      "path": "pages/demo/index",
+      "style": {
+        "navigationBarTitleText": "Demo"
+      },
+      "needLogin": true
+    },
+    {
+      "path": "pages/me/index",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    },
+    {
+      "path": "pages/me/login/index",
+      "style": {
+        "navigationBarTitleText": "登录"
+      }
+    },
+    {
+      "path": "pages/notFound/404",
+      "style": {
+        "navigationBarTitleText": "Not Found"
+      }
+    },
+    {
+      "path": "pages/lvzhi/register/index",
+      "style": {
+        "navigationBarTitleText": "履职登记"
+      }
+    },
+    {
+      "path": "pages/lianluo/zjsf/index",
+      "style": {
+        "navigationBarTitleText": "专家释法"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "enablePullDownRefresh": false,
+    "app-plus": {
+      "titleNView": false,
+      "animationType": "fade-in",
+      "animationDuration": 50
+    }
+  },
+  "tabBar": {
+    "color": "#474747",
+    "selectedColor": "#9BC6FC",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "static/images/tabBar/home.png",
+        "selectedIconPath": "static/images/tabBar/selectedHome.png"
+      },
+      {
+        "pagePath": "pages/demo/index",
+        "text": "Demo",
+        "iconPath": "static/images/tabBar/demo.png",
+        "selectedIconPath": "static/images/tabBar/selectedDemo.png"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "我的",
+        "iconPath": "static/images/tabBar/about.png",
+        "selectedIconPath": "static/images/tabBar/selectedAbout.png"
+      }
+    ]
+  }
+}
