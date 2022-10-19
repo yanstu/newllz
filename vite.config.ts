@@ -6,6 +6,8 @@ import { resolve } from 'path';
 import { loadEnv } from 'vite';
 import Components from 'unplugin-vue-components/vite';
 import { VantResolver } from 'unplugin-vue-components/resolvers';
+import requireTransform from 'vite-plugin-require-transform';
+import commonjs from '@rollup/plugin-commonjs';
 
 // https://vitejs.dev/config/
 export default ({ mode }: ConfigEnv): UserConfig => {
@@ -22,11 +24,15 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       Components({
         resolvers: [VantResolver()],
       }),
+      commonjs(),
+      requireTransform({
+        fileRegex: /.ts$|.vue$|.js$/,
+      }),
     ],
     resolve: {
       // 配置别名
       alias: {
-        '@': resolve('src'),
+        '@': resolve('./src'),
       },
     },
     server: {

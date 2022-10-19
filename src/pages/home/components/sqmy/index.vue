@@ -82,7 +82,7 @@ const dataList = ref([
   > view {
     margin-bottom: 10rpx;
     width: 100%;
-    height: 130rpx;
+    height: 160rpx;
     display: flex;
     border-radius: 10rpx;
     background: white;
@@ -96,7 +96,7 @@ const dataList = ref([
     }
     .content-neirong {
       justify-content: center;
-      margin-left: 10rpx;
+      margin-left: 15rpx;
       width: 70%;
       display: flex;
       flex-direction: column;
@@ -109,7 +109,7 @@ const dataList = ref([
         overflow: hidden;
       }
       .shijian {
-        margin-top: 5rpx;
+        margin-top: 15rpx;
       }
     }
   }

@@ -85,8 +85,8 @@ const dataList = ref([
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    text-decoration: underline;
-    color: #467cd4;
+    // text-decoration: underline;
+    // color: #467cd4;
   }
 }
 </style>

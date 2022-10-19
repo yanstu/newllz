@@ -7,11 +7,8 @@ import pkcs7 from 'crypto-js/pad-pkcs7';
 // @ts-ignore
 import ECB from 'crypto-js/mode-ecb';
 // @ts-ignore
-import md5 from 'crypto-js/md5';
-// @ts-ignore
 import UTF8 from 'crypto-js/enc-utf8';
 // @ts-ignore-end
-import Base64 from 'crypto-js/enc-base64';
 
 export interface EncryptionParams {
   key: string;
@@ -50,28 +47,4 @@ export class AesEncryption {
   decryptByAES(cipherText: string) {
     return decrypt(cipherText, this.key!, this.getOptions).toString(UTF8);
   }
-}
-
-/**
- * Base64加密
- * @param cipherText
- */
-export function encryptByBase64(cipherText: string) {
-  return UTF8.parse(cipherText).toString(Base64);
-}
-
-/**
- * Base64解密
- * @param cipherText
- */
-export function decodeByBase64(cipherText: string) {
-  return Base64.parse(cipherText).toString(UTF8);
-}
-
-/**
- * MD5加密
- * @param password
- */
-export function encryptByMd5(password: string) {
-  return md5(password).toString();
 }

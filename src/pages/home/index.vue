@@ -40,6 +40,7 @@
           clickable
           :border="false"
           :column-num="5"
+          icon-size="28"
         >
           <van-grid-item
             class="body-grid-item"
@@ -80,9 +81,6 @@ const themeVars = ref({
 });
 
 const funcClick = (item: func) => {
-  console.log(getCurrentInstance());
-  
-  $toast('提示文案');
   item.url &&
     uni.navigateTo({
       url: item.url,
