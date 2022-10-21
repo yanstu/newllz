@@ -75,8 +75,7 @@ const dataList = ref([
     border-radius: 15rpx;
     padding: 5rpx 10rpx;
     position: relative;
-    top: 5rpx;
-    margin-left: 20rpx;
+    margin-left: 30rpx;
   }
 }
 .content {

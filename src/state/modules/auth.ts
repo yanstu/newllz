@@ -1,7 +1,12 @@
 import { defineStore } from 'pinia';
 import { getCache, removeCache, setCache } from '@/utils/catch';
 import { TOKEN_KEY } from '@/enums/cacheEnum';
-import { login } from '@/services/api/auth';
+import {
+  login,
+  getAppIdAndAppSecret,
+  getWxOpenId,
+  wxOpenIdLogin,
+} from '@/services/api/auth';
 import { logout, refreshToken } from '@/services/api/auth';
 
 interface AuthState {
@@ -37,6 +42,31 @@ export const useAuthStore = defineStore({
         const { data } = await login(params);
         this.setToken(data.token);
         return Promise.resolve(data);
+      } catch (err: any) {
+        return Promise.reject(err);
+      }
+    },
+    /**
+     * @description 微信登录
+     * @param { string } code
+     */
+    async wxlogin(code: string): Promise<WxOpenIdLoginModel> {
+      try {
+        const appIdAndAppSecret = await getAppIdAndAppSecret({ WXID_QYBH: '' });
+        if (appIdAndAppSecret.data.Code == 0) throw appIdAndAppSecret;
+        if (appIdAndAppSecret.data.Code == 0) throw appIdAndAppSecret;
+        const openid = await getWxOpenId({
+          code,
+          ...appIdAndAppSecret.data.Data,
+        });
+        if (openid.data.Code == 0) throw appIdAndAppSecret;
+        const result = await wxOpenIdLogin({
+          WXID: openid.data.Data.openid,
+          LX: 0,
+          WXID_QYBH: '',
+        });
+        if (result.data.Code == 0) throw result;
+        return Promise.resolve(result);
       } catch (err: any) {
         return Promise.reject(err);
       }

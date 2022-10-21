@@ -107,7 +107,7 @@ export default class Request {
     });
   }
 
-  post<T>(url: string, data: AnyObject, options: Partial<HttpRequestConfig> = {}) {
+  post<T>(url: string, data?: AnyObject, options: Partial<HttpRequestConfig> = {}) {
     return this.middleware<T>({
       url,
       data,

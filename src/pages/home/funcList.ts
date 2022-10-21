@@ -11,17 +11,17 @@ export default [
     icon: require('../../static/images/home/代表公示logo.png'),
     url: '',
   },
-  {
+  /*{
     text: '视频连线',
     needLogin: true,
     icon: require('../../static/images/home/视频logo.png'),
     url: '',
-  },
+  },*/
   {
     text: '社情民意',
     needLogin: true,
     icon: require('../../static/images/home/社情logo.png'),
-    url: '',
+    url: '/pages/lianluo/sqmy/index',
   },
   {
     text: '人大动态',
@@ -29,30 +29,30 @@ export default [
     icon: require('../../static/images/home/动态logo.png'),
     url: '',
   },
-  {
+  /*{
     text: '建议办理',
     needLogin: true,
     icon: require('../../static/images/home/办理logo.png'),
     url: '',
-  },
-  {
+  },*/
+  /**{
     text: '建议考评',
     needLogin: true,
     icon: require('../../static/images/home/考评logo.png'),
     url: '',
-  },
-  {
+  },*/
+  /*{
     text: '提交建议',
     needLogin: true,
     icon: require('../../static/images/home/提交logo.png'),
     url: '',
-  },
-  {
+  },*/
+  /*{
     text: '建议反馈',
     needLogin: true,
     icon: require('../../static/images/home/反馈logo.png'),
     url: '',
-  },
+  },*/
   {
     text: '资料库',
     needLogin: true,
@@ -62,7 +62,7 @@ export default [
   {
     text: '联络站点',
     needLogin: true,
-    icon: require('../../static/images/home/联络站点logo.png'),
+    icon: require('@img/home/联络站点logo.png'),
     url: '',
   },
   {
@@ -105,7 +105,7 @@ export default [
     text: '群众留言',
     needLogin: true,
     icon: require('../../static/images/home/群众留言logo.png'),
-    url: '',
+    url: '/pages/lianluo/qzly/index',
   },
   {
     text: '短信通知',

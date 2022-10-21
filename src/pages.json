@@ -3,7 +3,7 @@
     {
       "path": "pages/home/index",
       "style": {
-        "navigationBarTitleText": "首页",
+        "navigationBarTitleText": "数智人大",
         "navigationBarBackgroundColor": "#47aaff"
       }
     },
@@ -43,6 +43,18 @@
       "style": {
         "navigationBarTitleText": "专家释法"
       }
+    },
+    {
+      "path": "pages/lianluo/qzly/index",
+      "style": {
+        "navigationBarTitleText": "群众留言"
+      }
+    },
+    {
+      "path": "pages/lianluo/sqmy/index",
+      "style": {
+        "navigationBarTitleText": "社情民意"
+      }
     }
   ],
   "globalStyle": {
@@ -60,6 +72,7 @@
     "color": "#474747",
     "selectedColor": "#9BC6FC",
     "backgroundColor": "#FFFFFF",
+    "blurEffect": "light",
     "list": [
       {
         "pagePath": "pages/home/index",

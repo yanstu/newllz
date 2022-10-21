@@ -14,12 +14,19 @@ export default [
     url: '/pages/lvzhi/register/index',
   },
   {
+    text: '视频连线',
+    color: '#47aaff',
+    icon: 'play-circle-o',
+    needLogin: true,
+    url: '',
+  },
+  /*{
     text: '代表建议',
     color: '#47aaff',
     icon: 'friends-o',
     needLogin: true,
     url: '',
-  },
+  },*/
   {
     text: '热门站点',
     color: '#47aaff',

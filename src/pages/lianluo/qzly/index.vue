@@ -20,23 +20,20 @@
     </view>
     <view class="list">
       <view class="list-title">
-        <text>履职活动</text>
+        <text>最新留言</text>
         <text class="more">更多 > </text>
       </view>
       <view class="data">
         <view v-for="(data, index) in dataList" :key="index">
           <view class="data-title">{{ data.title }}</view>
-          <view class="imglist">
-            <image v-for="img in data.imglist" :src="img" :key="img"> </image>
-          </view>
           <view class="data-info">
-            <view>
-              <van-icon name="location-o" />
-              {{ data.location }}
-            </view>
             <view>
               <van-icon name="user-o" />
               {{ data.zuozhe }}
+            </view>
+            <view>
+              <van-icon name="location-o" />
+              {{ data.location }}
             </view>
             <view>
               <van-icon name="clock-o" />
@@ -63,11 +60,6 @@ const dataList = ref([
   {
     title:
       '习近平：心往一处想劲往一处使推动中华民族伟大复兴号巨轮乘风破浪扬帆远航习近平：心往一处想劲往一处使推动中华民族伟大复兴号巨轮乘风破浪扬帆远航',
-    imglist: [
-      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsc.people.com.cn%2FNMediaFile%2F2021%2F0705%2FLOCAL202107051100000031045127092.jpg&refer=http%3A%2F%2Fsc.people.com.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668665760&t=f4bfe2d0389016b7e3a7cf55d1074137',
-      'http://www.gov.cn/govweb/c1444/202003/5492188/images/05f013c2e11943ff92a774d559df3d1c.jpg',
-      'http://www.gov.cn/govweb/c1444/202003/5492188/images/05f013c2e11943ff92a774d559df3d1c.jpg',
-    ],
     zuozhe: '张润林',
     location: '贵州省人大',
     date: '2022-09-12 12:32',
@@ -76,11 +68,6 @@ const dataList = ref([
   {
     title:
       '习近平：心往一处想劲往一处使推动中华民族伟大复兴号巨轮乘风破浪扬帆远航',
-    imglist: [
-      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsc.people.com.cn%2FNMediaFile%2F2021%2F0705%2FLOCAL202107051100000031045127092.jpg&refer=http%3A%2F%2Fsc.people.com.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668665760&t=f4bfe2d0389016b7e3a7cf55d1074137',
-      'http://www.gov.cn/govweb/c1444/202003/5492188/images/05f013c2e11943ff92a774d559df3d1c.jpg',
-      'http://www.gov.cn/govweb/c1444/202003/5492188/images/05f013c2e11943ff92a774d559df3d1c.jpg',
-    ],
     zuozhe: '张润林',
     location: '贵州省人大',
     date: '2022-09-12 12:32',
@@ -89,11 +76,6 @@ const dataList = ref([
   {
     title:
       '习近平：心往一处想劲往一处使推动中华民族伟大复兴号巨轮乘风破浪扬帆远航',
-    imglist: [
-      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsc.people.com.cn%2FNMediaFile%2F2021%2F0705%2FLOCAL202107051100000031045127092.jpg&refer=http%3A%2F%2Fsc.people.com.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668665760&t=f4bfe2d0389016b7e3a7cf55d1074137',
-      'http://www.gov.cn/govweb/c1444/202003/5492188/images/05f013c2e11943ff92a774d559df3d1c.jpg',
-      'http://www.gov.cn/govweb/c1444/202003/5492188/images/05f013c2e11943ff92a774d559df3d1c.jpg',
-    ],
     zuozhe: '张润林',
     location: '贵州省人大',
     date: '2022-09-12 12:32',
@@ -102,11 +84,6 @@ const dataList = ref([
   {
     title:
       '习近平：心往一处想劲往一处使推动中华民族伟大复兴号巨轮乘风破浪扬帆远航',
-    imglist: [
-      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsc.people.com.cn%2FNMediaFile%2F2021%2F0705%2FLOCAL202107051100000031045127092.jpg&refer=http%3A%2F%2Fsc.people.com.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668665760&t=f4bfe2d0389016b7e3a7cf55d1074137',
-      'http://www.gov.cn/govweb/c1444/202003/5492188/images/05f013c2e11943ff92a774d559df3d1c.jpg',
-      'http://www.gov.cn/govweb/c1444/202003/5492188/images/05f013c2e11943ff92a774d559df3d1c.jpg',
-    ],
     zuozhe: '张润林',
     location: '贵州省人大',
     date: '2022-09-12 12:32',
@@ -115,11 +92,6 @@ const dataList = ref([
   {
     title:
       '习近平：心往一处想劲往一处使推动中华民族伟大复兴号巨轮乘风破浪扬帆远航',
-    imglist: [
-      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsc.people.com.cn%2FNMediaFile%2F2021%2F0705%2FLOCAL202107051100000031045127092.jpg&refer=http%3A%2F%2Fsc.people.com.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668665760&t=f4bfe2d0389016b7e3a7cf55d1074137',
-      'http://www.gov.cn/govweb/c1444/202003/5492188/images/05f013c2e11943ff92a774d559df3d1c.jpg',
-      'http://www.gov.cn/govweb/c1444/202003/5492188/images/05f013c2e11943ff92a774d559df3d1c.jpg',
-    ],
     zuozhe: '张润林',
     location: '贵州省人大',
     date: '2022-09-12 12:32',
@@ -174,20 +146,6 @@ page {
     > view {
       display: flex;
       flex-direction: column;
-      .imglist {
-        margin-top: 10rpx;
-        width: 100%;
-        height: 200rpx;
-        display: flex;
-        > image {
-          height: 100%;
-          flex: 1;
-          margin-right: 5rpx;
-        }
-        > image:last-child {
-          margin-right: 0;
-        }
-      }
       .data-title {
         word-break: break-all;
         text-overflow: ellipsis;

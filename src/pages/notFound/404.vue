@@ -1,6 +1,6 @@
 <template>
   <view class="page">
-    <image mode="widthFix" src="/static/svg/weep.svg" />
+    <img mode="widthFix" src="/static/svg/weep.svg" />
     <view class="mb-40rpx">
       <text>{{ go }} 页面找不到了~</text>
     </view>

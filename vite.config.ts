@@ -33,6 +33,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       // 配置别名
       alias: {
         '@': resolve('./src'),
+        '@img': resolve('./src/static/images'),
       },
     },
     server: {

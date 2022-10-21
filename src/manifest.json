@@ -67,7 +67,7 @@
   "vueVersion": "3",
   "h5": {
     "router": {
-      "mode": "hash",
+      "mode": "history",
       "base": "./"
     },
     "devServer": {

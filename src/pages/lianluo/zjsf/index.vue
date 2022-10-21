@@ -1,18 +1,6 @@
 <template>
   <view>
-    <view class="head">
-      <view class="search-bar">
-        <van-icon class="search-icon" name="search" />
-        <input
-          class="search-input"
-          type="text"
-          placeholder="请输入关键字"
-          placeholder-color="#ccc"
-        />
-        <view class="search-btn"> 搜索 </view>
-      </view>
-      <view class="search-gaoji"> 高级 > </view>
-    </view>
+    <navbar></navbar>
     <view class="body">
       <view class="changzhu">
         <view
@@ -115,50 +103,6 @@ const zixunList = ref([
 <style lang="scss">
 page {
   background: white;
-}
-.head {
-  height: 100rpx;
-  background: linear-gradient(to bottom, #47aaff, #53d0fc);
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  .search-bar {
-    width: 80%;
-    height: 70rpx;
-    background: white;
-    border-radius: 20rpx;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .search-btn {
-      border-left: 1px solid rgba(209, 208, 208, 0.8);
-      color: #47aaff;
-      padding: 0 10rpx;
-      width: 15%;
-      text-align: center;
-      font-size: 30rpx;
-    }
-    .search-icon {
-      text-align: center;
-      width: 10%;
-      font-size: 40rpx;
-      padding-left: 8rpx;
-    }
-    .search-input {
-      width: 75%;
-    }
-  }
-  .search-gaoji {
-    width: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    margin-left: 10rpx;
-    font-size: 35rpx;
-  }
 }
 .body {
   padding: 0 10rpx;

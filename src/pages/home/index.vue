@@ -40,7 +40,7 @@
           clickable
           :border="false"
           :column-num="5"
-          icon-size="28"
+          icon-size="32"
         >
           <van-grid-item
             class="body-grid-item"
@@ -62,6 +62,7 @@
       <sqmy></sqmy>
       <mfd></mfd>
     </view>
+    <tabbar></tabbar>
   </view>
 </template>
 <script setup lang="ts">
@@ -73,11 +74,14 @@ import sqmy from './components/sqmy';
 import llz from './components/llz';
 import funcList, { func } from './funcList';
 import changzhuList, { changzhu } from './changzhuList';
+import tabbar from '@/components/tabbar';
+import { Toast } from 'Vant';
 
 const searchValue = ref('');
 const themeVars = ref({
   gridItemContentBackgroundColor: 'transparent',
   gridItemContentPadding: '10rpx',
+  gridItemTextFontSize: '28rpx'
 });
 
 const funcClick = (item: func) => {
