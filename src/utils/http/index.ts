@@ -60,8 +60,8 @@ request.interceptors.request.use(
 request.interceptors.response.use(
   async (response: HttpSuccess<API<any>>) => {
     const { data: resData } = response;
-    const { code, message, data } = resData;
-    if (code === 10000) {
+    const { Code, Message, Data } = resData;
+    if (Code === 10000) {
       return resData as any;
     }
     uni.showToast({

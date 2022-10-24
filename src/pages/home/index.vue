@@ -76,12 +76,13 @@ import funcList, { func } from './funcList';
 import changzhuList, { changzhu } from './changzhuList';
 import tabbar from '@/components/tabbar';
 import { Toast } from 'Vant';
+import mapChart from '@/components/charts/map-chart';
 
 const searchValue = ref('');
 const themeVars = ref({
   gridItemContentBackgroundColor: 'transparent',
   gridItemContentPadding: '10rpx',
-  gridItemTextFontSize: '28rpx'
+  gridItemTextFontSize: '28rpx',
 });
 
 const funcClick = (item: func) => {
@@ -91,10 +92,15 @@ const funcClick = (item: func) => {
     });
 };
 const changzhuClick = (item: changzhu) => {
-  item.url &&
-    uni.navigateTo({
-      url: item.url,
-    });
+  console.log(typeof item.url);
+  if (typeof item.url == 'string') {
+    item.url &&
+      uni.navigateTo({
+        url: item.url,
+      });
+  } else if (typeof item.url == 'function') {
+    item.url && item.url();
+  }
 };
 </script>
 <style lang="scss">

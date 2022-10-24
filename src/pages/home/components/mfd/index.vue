@@ -17,24 +17,19 @@
 <script setup lang="ts">
 const dataList = ref([
   {
-    title:
-      '黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞',
+    title: '民事权利能力和民事行为能力',
   },
   {
-    title:
-      '黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞',
+    title: '个体工商户和农村承包经营户',
   },
   {
-    title:
-      '黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞',
+    title: '民事法律行为的附条件和附期限',
   },
   {
-    title:
-      '黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞',
+    title: '物权的设立、变更、转让和消灭',
   },
   {
-    title:
-      '黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞',
+    title: '国家所有权和集体所有权、私人所有权',
   },
 ]);
 </script>
@@ -44,8 +39,7 @@ const dataList = ref([
   margin-top: 30rpx;
   border-radius: 15rpx;
   position: relative;
-  background: url('../../../../static/images/home/分布概况背景.png') 45%
-    45%;
+  background: url('../../../../static/images/home/分布概况背景.png') 45% 45%;
   height: 90rpx;
   width: 100%;
   display: flex;
@@ -75,14 +69,14 @@ const dataList = ref([
   display: flex;
   flex-direction: column;
   > view {
-    margin-bottom: 10rpx;
+    margin-bottom: 20rpx;
     width: 100%;
     display: flex;
-    padding: 5rpx 10rpx;
+    padding: 20rpx 10rpx;
     border-radius: 10rpx;
     background: white;
     overflow: hidden;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     // text-decoration: underline;
     // color: #467cd4;

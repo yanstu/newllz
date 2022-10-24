@@ -6,7 +6,9 @@ import { useAuthStore } from '@/state/modules/auth';
 // @ts-ignore
 import { cloneDeep } from 'lodash-es';
 
-export type NavigateOptions = Partial<Omit<UniApp.NavigateToOptions, 'url'>> & { delta?: number };
+export type NavigateOptions = Partial<Omit<UniApp.NavigateToOptions, 'url'>> & {
+  delta?: number;
+};
 
 export class Navigates {
   private type: string;

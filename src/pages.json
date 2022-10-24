@@ -5,56 +5,85 @@
       "style": {
         "navigationBarTitleText": "数智人大",
         "navigationBarBackgroundColor": "#47aaff"
-      }
+      },
+      "needLogin": false
     },
     {
       "path": "pages/demo/index",
       "style": {
-        "navigationBarTitleText": "Demo"
+        "navigationBarTitleText": "联络站"
       },
-      "needLogin": true
+      "needLogin": false
     },
     {
       "path": "pages/me/index",
       "style": {
         "navigationBarTitleText": "我的"
-      }
+      },
+      "needLogin": false
     },
     {
       "path": "pages/me/login/index",
       "style": {
         "navigationBarTitleText": "登录"
-      }
+      },
+      "needLogin": false
     },
     {
       "path": "pages/notFound/404",
       "style": {
         "navigationBarTitleText": "Not Found"
-      }
+      },
+      "needLogin": false
     },
     {
       "path": "pages/lvzhi/register/index",
       "style": {
         "navigationBarTitleText": "履职登记"
-      }
+      },
+      "needLogin": false
     },
     {
       "path": "pages/lianluo/zjsf/index",
       "style": {
         "navigationBarTitleText": "专家释法"
-      }
+      },
+      "needLogin": false
     },
     {
       "path": "pages/lianluo/qzly/index",
       "style": {
         "navigationBarTitleText": "群众留言"
-      }
+      },
+      "needLogin": false
     },
     {
       "path": "pages/lianluo/sqmy/index",
       "style": {
         "navigationBarTitleText": "社情民意"
-      }
+      },
+      "needLogin": false
+    },
+    {
+      "path": "pages/lianluo/llzd/index",
+      "style": {
+        "navigationBarTitleText": "联络站点"
+      },
+      "needLogin": false
+    },
+    {
+      "path": "pages/lvzhi/mfd/index",
+      "style": {
+        "navigationBarTitleText": "民法典"
+      },
+      "needLogin": false
+    },
+    {
+      "path": "pages/lianluo/splx/index",
+      "style": {
+        "navigationBarTitleText": "视频连线"
+      },
+      "needLogin": false
     }
   ],
   "globalStyle": {

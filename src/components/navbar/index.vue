@@ -24,11 +24,11 @@
 </template>
 
 <script setup lang="ts">
-const leftClick = () => history.back();
+const leftClick = () => uni.navigateBack();
 import { getEnvValue } from '@/utils/env';
-import { getTitle } from '@/utils';
+import { getCurrPageTitle } from '@/utils';
 
-const title = getTitle() || getEnvValue<string>('VITE_APP_TITLE');
+const title = getCurrPageTitle() || getEnvValue<string>('VITE_APP_TITLE');
 
 /*const props = withDefaults(
   defineProps<{

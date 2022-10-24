@@ -30,17 +30,19 @@
     <view class="charts">
       <view>
         <view class="chart-title">联络站分布概况</view>
-        <img src="../../../../static/images/home/分布概况图.png" alt="" />
+        <map-chart></map-chart>
       </view>
-      <view>
+      <!-- <view>
         <view class="chart-title">工作数据</view>
         <img src="../../../../static/images/home/折线图.png" alt="" />
-      </view>
+      </view> -->
     </view>
   </view>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import mapChart from '@/components/charts/map-chart';
+</script>
 
 <style lang="scss">
 .banner {
@@ -82,7 +84,7 @@
   }
 }
 .charts {
-  height: 400rpx;
+  height: 500rpx;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,8 +93,8 @@
     height: 100%;
     border-radius: 15rpx;
     overflow: hidden;
-    width: 48.5%;
-    margin-left: 2%;
+    flex: 1;
+    // margin-left: 2%;
     position: relative;
     background: white;
     .chart-title {

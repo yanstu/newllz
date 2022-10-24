@@ -2,7 +2,7 @@
   <view>
     <view class="banner">
       <img src="../../../../static/images/home/tiananmen.png" />
-      代表风采<span class="more"> 查看更多 > </span>
+      人大动态<span class="more"> 查看更多 > </span>
     </view>
   </view>
   <view class="content"
@@ -23,26 +23,24 @@
 const dataList = ref([
   {
     banner:
-      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20170924%2F05140ccba01c42858bf8f8de24d8b6f3.gif&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668582927&t=bc8258c4727ed978811f799e5de5518a',
-    title: '黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞',
+      'http://jgz.app.todayguizhou.com/data/upload/image/20221018/1666086726745459.jpg',
+    title:
+      '党的二十大贵州省代表团举行全体会议 学习贯彻习近平总书记在参加广西代表团讨论时的重要讲话精神',
   },
   {
     banner:
-      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20170924%2F05140ccba01c42858bf8f8de24d8b6f3.gif&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668582927&t=bc8258c4727ed978811f799e5de5518a',
-    title:
-      '黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞',
+      'http://www.gzrd.gov.cn/uploadfiles/202210/20/2022102015400450545150-thumbnail.jpg',
+    title: '慕德贵率队赴遵义市开展《中华人民共和国乡村振兴促进法》执法检查',
   },
   {
     banner:
-      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20170924%2F05140ccba01c42858bf8f8de24d8b6f3.gif&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668582927&t=bc8258c4727ed978811f799e5de5518a',
-    title:
-      '黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞',
+      'http://www.gzrd.gov.cn/uploadfiles/202210/21/2022102115560930074913.jpg',
+    title: '慕德贵在遵义市调研定点联系企业',
   },
   {
     banner:
-      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20170924%2F05140ccba01c42858bf8f8de24d8b6f3.gif&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668582927&t=bc8258c4727ed978811f799e5de5518a',
-    title:
-      '黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞',
+      'http://www.gzrd.gov.cn/uploadfiles/202210/22/2022102216573792553650-thumbnail.jpg ',
+    title: '慕德贵到正安县调研并看望省人大常委会机关驻村工作队',
   },
 ]);
 </script>

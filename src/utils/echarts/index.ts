@@ -1,20 +1,36 @@
-import { nextTick, onMounted, onUnmounted, Ref, unref } from 'vue';
-import type { EChartsOption } from 'echarts';
+import { nextTick, onMounted, onUnmounted, unref } from 'vue';
+import type { Ref } from 'vue';
 import echarts from './lib';
 import { SVGRenderer, CanvasRenderer } from 'echarts/renderers';
-import { RenderType, ThemeType } from './types';
+import type { EChartsOption } from 'echarts';
+import { RenderType, ThemeType, UseChartsOptionType } from './types';
+export * from './types';
 
 export default function useChart(
   elRef: Ref<HTMLDivElement>,
-  autoChartSize = false,
-  animation: boolean = false,
-  render: RenderType = RenderType.SVGRenderer,
-  theme: ThemeType = ThemeType.Default
+  option?: UseChartsOptionType
 ) {
+  const { render, theme, autoChartSize, animation, registerMap } = option || {
+    render: RenderType.SVGRenderer,
+    autoChartSize: false,
+    animation: {},
+    theme: ThemeType.Default,
+    registerMap: {},
+  };
   // 渲染模式
   echarts.use(render === RenderType.SVGRenderer ? SVGRenderer : CanvasRenderer);
   // echart实例
   let chartInstance: echarts.ECharts | null = null;
+  try {
+    registerMap &&
+      echarts.registerMap(
+        registerMap.mapName,
+        registerMap.geoJson,
+        registerMap.specialAreas
+      );
+  } catch (error) {
+    console.error('registerMap ERROR', error);
+  }
 
   // 初始化echart
   const initCharts = () => {
@@ -26,14 +42,16 @@ export default function useChart(
   };
 
   // 更新/设置配置
-  const setOption = (option: EChartsOption) => {
+  const setOption = (option: EChartsOption): void => {
+    nextTick(() => {
       if (!chartInstance) {
         initCharts();
         if (!chartInstance) return;
       }
-      
+
       chartInstance.setOption(option);
       hideLoading();
+    });
   };
 
   // 获取echart实例
@@ -52,8 +70,11 @@ export default function useChart(
   // 监听元素大小
   function watchEl() {
     // 给元素添加过渡
-    if (animation) {
-      elRef.value.style.transition = 'width 1s, height 1s';
+    if (animation?.enable) {
+      let styles = animation?.styles ?? {};
+      for (let key in styles) {
+        elRef.value.style[key] = styles[key];
+      }
     }
     const resizeObserver = new ResizeObserver((entries) => resize());
     resizeObserver.observe(elRef.value);

@@ -25,21 +25,21 @@
 const dataList = ref([
   {
     banner:
-      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20170924%2F05140ccba01c42858bf8f8de24d8b6f3.gif&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668582927&t=bc8258c4727ed978811f799e5de5518a',
-    title: '黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞',
-    date: '2012-09-12 16:49',
+      'http://www.gzrd.gov.cn/uploadfiles/202108/18/2021081809392129980345.jpg',
+    title: '黔西市人大代表杨威：热情为民服务 倾心履职尽责',
+    date: '2021-08-18 16:49',
   },
   {
     banner:
-      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20170924%2F05140ccba01c42858bf8f8de24d8b6f3.gif&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668582927&t=bc8258c4727ed978811f799e5de5518a',
-    title: '黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞',
-    date: '2012-09-12 16:49',
+      'http://www.gzrd.gov.cn/uploadfiles/202108/17/2021081709364078798353.jpg',
+    title: '毕节市人大代表赵玲：用心为民办实事',
+    date: '2021-08-17 16:49',
   },
   {
     banner:
-      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20170924%2F05140ccba01c42858bf8f8de24d8b6f3.gif&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668582927&t=bc8258c4727ed978811f799e5de5518a',
-    title: '黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞',
-    date: '2012-09-12 16:49',
+      'http://www.gzrd.gov.cn/uploadfiles/202203/05/2022030514474723036400-thumbnail.png',
+    title: '全国人大代表、贵州航天天马机电科技有限公司材料成型部有色金属焊接班班长姜涛：弘扬工匠精神 深耕工匠文化',
+    date: '2021-08-16 16:49',
   },
 ]);
 </script>
@@ -49,7 +49,8 @@ const dataList = ref([
   margin-top: 30rpx;
   border-radius: 15rpx;
   position: relative;
-  background: url('../../../../static/images/home/贵州社情民意大背景.png') 55% 55%;
+  background: url('../../../../static/images/home/贵州社情民意大背景.png') 55%
+    55%;
   height: 90rpx;
   width: 100%;
   display: flex;
@@ -109,6 +110,7 @@ const dataList = ref([
       }
       .shijian {
         margin-top: 15rpx;
+        color: gray;
       }
     }
   }

@@ -81,7 +81,7 @@ export default [
     text: '民法典',
     needLogin: true,
     icon: require('../../static/images/home/民法典logo.png'),
-    url: '',
+    url: '/pages/lvzhi/mfd/index',
   },
   {
     text: '专家释法',

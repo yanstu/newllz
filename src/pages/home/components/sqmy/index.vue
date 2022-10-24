@@ -25,21 +25,21 @@
 const dataList = ref([
   {
     banner:
-      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20170924%2F05140ccba01c42858bf8f8de24d8b6f3.gif&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668582927&t=bc8258c4727ed978811f799e5de5518a',
-    title: '黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞',
-    date: '2012-09-12 16:49',
+      'http://www.gzrd.gov.cn/uploadfiles/202209/05/2022090509551964538672.jpg',
+    title: '黔东南州人大常委会执法检查组到丹寨县开展执法检查',
+    date: '2022-09-05 16:49',
   },
   {
     banner:
-      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20170924%2F05140ccba01c42858bf8f8de24d8b6f3.gif&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668582927&t=bc8258c4727ed978811f799e5de5518a',
-    title: '黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞',
-    date: '2012-09-12 16:49',
+      'http://www.gzrd.gov.cn/uploadfiles/202209/29/2022092909231811135833.jpg',
+    title:
+      '“我捐10吨蔬菜”“我捐17万现金”“我捐22万现金”...... 文正友等赫章县各级人大代表向抗疫一线捐款捐物',
+    date: '2022-09-29 16:49',
   },
   {
-    banner:
-      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20170924%2F05140ccba01c42858bf8f8de24d8b6f3.gif&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668582927&t=bc8258c4727ed978811f799e5de5518a',
-    title: '黔西市人大代表杨威：热情为群众考虑利率噜啦噜啦嘞',
-    date: '2012-09-12 16:49',
+    banner: 'https://inews.gtimg.com/newsapp_bt/0/15315609517/1000',
+    title: '贵州民政这十年|基层社会治理更加多元',
+    date: '2022-09-12 16:49',
   },
 ]);
 </script>
@@ -49,7 +49,8 @@ const dataList = ref([
   margin-top: 30rpx;
   border-radius: 15rpx;
   position: relative;
-  background: url('../../../../static/images/home/贵州社情民意大背景.png') 45% 45%;
+  background: url('../../../../static/images/home/贵州社情民意大背景.png') 45%
+    45%;
   height: 90rpx;
   width: 100%;
   display: flex;
@@ -109,6 +110,7 @@ const dataList = ref([
       }
       .shijian {
         margin-top: 15rpx;
+        color: gray;
       }
     }
   }
