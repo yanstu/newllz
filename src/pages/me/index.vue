@@ -2,7 +2,10 @@
   <view class="container">
     <view class="head-wrap">
       <view class="avatar">
-        <img class="img" src="@img/avatar.png" />
+        <img
+          class="img"
+          src="https://img2.baidu.com/it/u=2893147358,3393430132&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
+        />
       </view>
       <view class="desc">{{ isLogin ? '测试' : '未登入' }}</view>
     </view>

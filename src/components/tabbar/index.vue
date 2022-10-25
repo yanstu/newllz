@@ -19,7 +19,6 @@
 </template>
 
 <script setup lang="ts">
-
 const active = ref(0);
 
 const tabbarList = [
@@ -27,22 +26,21 @@ const tabbarList = [
     pagePath: '/pages/home/index',
     text: '首页',
     iconPath: require('@img/tabBar/home.png'),
-    selectedIconPath: require('@img/tabBar/selectedHome.png'),
+    selectedIconPath: require('@img/tabBar/home1.png'),
   },
   {
-    pagePath: '/pages/demo/index',
-    text: 'Demo',
-    iconPath: require('@img/tabBar/demo.png'),
-    selectedIconPath: require('@img/tabBar/selectedDemo.png'),
+    pagePath: '/pages/llz/index',
+    text: '联络站',
+    iconPath: require('@img/tabBar/llz.png'),
+    selectedIconPath: require('@img/tabBar/llz1.png'),
   },
   {
     pagePath: '/pages/me/index',
     text: '我的',
-    iconPath: require('@img/tabBar/about.png'),
-    selectedIconPath: require('@img/tabBar/selectedAbout.png'),
+    iconPath: require('@img/tabBar/me.png'),
+    selectedIconPath: require('@img/tabBar/me1.png'),
   },
 ];
-
 </script>
 
 <style lang="scss"></style>

@@ -63,7 +63,7 @@ export default [
     text: '联络站点',
     needLogin: true,
     icon: require('@img/home/联络站点logo.png'),
-    url: '',
+    url: '/pages/lianluo/llzd/index',
   },
   {
     text: '代表风采',

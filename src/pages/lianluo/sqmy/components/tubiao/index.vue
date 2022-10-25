@@ -36,7 +36,15 @@ const option = computed<EChartsOption>(() => ({
   xAxis: [
     {
       type: 'category',
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      data: [
+        '星期六',
+        '星期天',
+        '星期一',
+        '星期二',
+        '星期三',
+        '星期四',
+        '星期五',
+      ],
       axisTick: {
         alignWithLabel: true,
       },
@@ -52,7 +60,7 @@ const option = computed<EChartsOption>(() => ({
       name: 'Direct',
       type: 'bar',
       barWidth: '60%',
-      data: [10, 52, 200, 334, 390, 330, 220],
+      data: [3, 4, 1, 5, 7, 10, 4],
     },
   ],
 }));

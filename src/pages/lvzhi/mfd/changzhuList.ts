@@ -13,7 +13,7 @@ export default [
   },
   {
     text: '热门浏览',
-    icon: 'chat-o',
+    icon: 'fire-o',
     color: '#ee0a24',
     url: '',
     badge: 0,

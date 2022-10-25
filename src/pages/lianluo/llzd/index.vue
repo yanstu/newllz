@@ -42,19 +42,19 @@ import mapChart from '@/components/charts/map-chart';
 const columns = ['1', '2', '3', '4', '5', '10'];
 const pickerIndex = ref(1);
 const showPicker = ref(false);
-const juli = ref(1);
+const juli = ref(10 );
 const dataList = [
   {
     name: '八鸽岩街道人大代表网上联络站',
-    location: '云岩区丶八鸽岩',
+    location: '云岩区-八鸽岩',
   },
   {
-    name: '八鸽岩街道人大代表网上联络站',
-    location: '云岩区丶八鸽岩',
+    name: '艳山红镇人大代表网上联络站',
+    location: '白云区-沙文镇',
   },
   {
-    name: '八鸽岩街道人大代表网上联络站',
-    location: '云岩区丶八鸽岩',
+    name: '泉湖道人大代表网上联络站',
+    location: '白云区-沙文镇',
   },
 ];
 
