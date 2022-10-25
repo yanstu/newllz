@@ -12,6 +12,8 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Tabbar: typeof import('./src/components/tabbar/index.vue')['default']
+    UniCollapse: typeof import('./src/components/uni/uni-collapse/components/uni-collapse/uni-collapse.vue')['default']
+    UniCollapseItem: typeof import('./src/components/uni/uni-collapse/components/uni-collapse-item/uni-collapse-item.vue')['default']
     VanBadge: typeof import('vant/es')['Badge']
     VanButton: typeof import('vant/es')['Button']
     VanConfigProvider: typeof import('vant/es')['ConfigProvider']

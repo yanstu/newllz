@@ -73,6 +73,6 @@
     "devServer": {
       "https": false
     },
-    "title": "uni-preset-vue3"
+    "title": "数智人大"
   }
 }

@@ -37,7 +37,7 @@ const dataList = ref([
     date: '2022-09-29 16:49',
   },
   {
-    banner: 'https://inews.gtimg.com/newsapp_bt/0/15315609517/1000',
+    banner: 'https://p6.itc.cn/q_70/images03/20221009/a4872880189c49dc97fc43619ebc0310.png',
     title: '贵州民政这十年|基层社会治理更加多元',
     date: '2022-09-12 16:49',
   },

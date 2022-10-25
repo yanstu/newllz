@@ -1,14 +1,12 @@
-<script lang="ts" setup></script>
-
 <template>
-  <view class="container">
+  <view>
     页面构建中...
+    <tabbar></tabbar>
   </view>
 </template>
 
-<style lang="scss" scoped>
-.container{
-  padding: 128rpx 0;
-  text-align: center;
-}
-</style>
+<script lang="ts" setup>
+import tabbar from '@/components/tabbar';
+</script>
+
+<style lang="scss" scoped></style>

@@ -12,74 +12,96 @@
           <text>{{ item.text }}</text>
         </view>
       </view>
-    </view>
-
-    <van-config-provider :theme-vars="themeVars">
-      <van-collapse v-model="activeNames">
-        <van-collapse-item
-          v-for="(item, index) in dataList"
-          :key="index"
-          :title="item.title"
-          :name="item.title"
-        >
-          <view
-            class="jc-list"
-            v-for="(jieci, index) in item.datas"
-            :key="index"
-          >
-            <view class="jc-title"
-              ><van-icon name="chat-o" color="#ee0a24" />{{ jieci.title }}({{
-                jieci.count
-              }})</view
-            >
-            <view>
-              <view v-for="(user, index) in jieci.userlist" :key="index">
-                <img :src="user.avatar" /><text>{{ user.username }}</text>
-              </view>
-            </view>
-          </view>
-        </van-collapse-item>
-      </van-collapse>
-    </van-config-provider>
-
-    <view class="list" v-for="(item, index) in dataList" :key="index">
-      <view class="list-title">
-        <text>{{ item.title }}</text>
-        <text class="more">更多 > </text>
+      <view class="tubiao">
+        <view class="tongji">
+          <view class="nan"> 男：62046人 </view>
+          <view class="nv"> 女：23282人 </view>
+        </view>
+        <tubiao></tubiao>
       </view>
-
-      <view class="data">
-        <view v-for="(data, index) in item.datas" :key="index">
-          <view class="data-title"
-            ><text class="text-red" v-if="index <= 2">[置顶]</text
-            >{{ data.title }}</view
-          >
-          <view class="data-info">
-            <view>
-              <van-icon name="clock-o" />
-              {{ data.date }}
-            </view>
-            <view>
-              <van-icon name="eye-o" />
-              {{ data.views }}
-            </view>
-            <view class="text-blue"
-              >详情
-              <van-icon name="arrow" />
-            </view>
+      <view class="table">
+        <view class="table-title">
+          <text>代表统计</text>
+        </view>
+        <view class="table-list">
+          <view>
+            <text class="text"> 全国人大代表： </text>
+            <text class="num"> 37人 </text>
           </view>
-          <view v-if="index != item.datas.length - 1" class="divider"> </view>
+          <view>
+            <text class="text"> 省人大代表： </text>
+            <text class="num"> 616人 </text>
+          </view>
+          <view>
+            <text class="text"> 市（州）人大代表： </text>
+            <text class="num"> 2830人 </text>
+          </view>
+          <view>
+            <text class="text"> 区（县）人大代表： </text>
+            <text class="num"> 18497人 </text>
+          </view>
+          <view>
+            <text class="text"> 乡（镇）人大代表： </text>
+            <text class="num"> 63330人 </text>
+          </view>
         </view>
       </view>
     </view>
+
+    <uni-collapse class="list" accordion v-model="activeNames">
+      <uni-collapse-item
+        class="list-item"
+        v-for="(item, index) in dataList"
+        :key="index"
+        :title="item.title"
+        :name="item.title"
+        :background="'linear-gradient(to right, #1477D5, #A6D8F5)'"
+      >
+        <view class="jc-list" v-for="(jieci, index) in item.datas" :key="index">
+          <view class="jc-title"
+            ><img src="@img/other/guohui.png" />{{ jieci.title }}（{{
+              jieci.count
+            }}人）</view
+          >
+          <view class="jc-userlist">
+            <van-config-provider :theme-vars="themeVars">
+              <van-grid
+                class="body-grid"
+                gutter="0"
+                clickable
+                :border="false"
+                :column-num="6"
+                icon-size="55"
+              >
+                <van-grid-item
+                  :key="user"
+                  v-for="user in jieci.userlist"
+                  :icon="user.avatar"
+                  :text="user.username"
+                />
+              </van-grid>
+            </van-config-provider>
+          </view>
+        </view>
+      </uni-collapse-item>
+    </uni-collapse>
   </view>
 </template>
 
 <script setup lang="ts">
 import navbar from '@/components/navbar';
+import tubiao from './components/tubiao';
 import dataList from './dataList';
 import changzhuList, { changzhu } from './changzhuList';
-const activeNames = ref(['1']);
+import uniCollapse from '@/components/uni/uni-collapse/components/uni-collapse/uni-collapse.vue';
+import uniCollapseItem from '@/components/uni/uni-collapse/components/uni-collapse-item/uni-collapse-item.vue';
+
+const activeNames = ref('');
+const themeVars = ref({
+  gridItemContentBackgroundColor: 'transparent',
+  gridItemContentPadding: '10rpx',
+  gridItemTextFontSize: '28rpx',
+});
 </script>
 
 <style lang="scss">
@@ -104,52 +126,85 @@ page {
       }
     }
   }
-}
-.list {
-  margin-top: 30rpx;
-  padding: 0 10rpx;
-  .list-title {
-    padding: 0 15rpx;
-    display: flex;
-    width: 100%;
-    height: 60rpx;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    background: linear-gradient(to right, #1876cf, #a7daf9);
-    font-size: 35rpx;
-    .more {
-      text-decoration: underline;
-      font-size: 30rpx;
+  .tubiao {
+    margin-top: 30rpx;
+    .tongji {
+      display: flex;
+      > view {
+        flex: 1;
+        color: white;
+        padding: 10rpx 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .nan {
+        background: #61a9e2;
+        margin-right: 0.5%;
+      }
+      .nv {
+        background: #fe893c;
+        margin-left: 0.5%;
+      }
     }
   }
-  .data {
-    margin-top: 20rpx;
-    > view {
+  .table {
+    .table-title {
+      padding: 0 15rpx;
       display: flex;
-      flex-direction: column;
-      .data-title {
-        word-break: break-all;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        overflow: hidden;
+      width: 100%;
+      height: 60rpx;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      background: linear-gradient(to right, #1876cf, #a7daf9);
+      font-size: 35rpx;
+      .more {
+        text-decoration: underline;
+        font-size: 30rpx;
       }
-      .data-info {
+    }
+    .table-list {
+      > view {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        height: 50rpx;
+        line-height: 50rpx;
         margin-top: 10rpx;
-        > view {
-          font-size: 25rpx;
-          color: gray;
+        text {
+          height: 100%;
+          padding-left: 20rpx;
+        }
+        .text {
+          width: 60%;
+          background: #e0eaf3;
+        }
+        .num {
+          width: 40%;
+          background: #f2f2f2;
         }
       }
-      .divider {
-        height: 0.5px;
-        background: rgba(209, 208, 208, 0.5);
-        margin: 15rpx 0;
+    }
+  }
+}
+.list {
+  padding: 0 10rpx;
+  margin-top: 30rpx;
+  .list-item {
+    margin-top: 10rpx;
+    .jc-list {
+      .jc-title {
+        margin: 15rpx 0rpx;
+        display: flex;
+        height: 60rpx;
+        align-items: center;
+        font-size: 32rpx;
+        img {
+          height: 50rpx;
+          margin-right: 10rpx;
+        }
+      }
+      .jc-userlist {
+        margin-bottom: 20rpx;
       }
     }
   }

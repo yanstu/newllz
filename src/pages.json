@@ -84,6 +84,20 @@
         "navigationBarTitleText": "视频连线"
       },
       "needLogin": false
+    },
+    {
+      "path": "pages/lvzhi/dbgs/index",
+      "style": {
+        "navigationBarTitleText": "代表公示"
+      },
+      "needLogin": false
+    },
+    {
+      "path": "pages/lianluo/rddt/index",
+      "style": {
+        "navigationBarTitleText": "人大动态"
+      },
+      "needLogin": false
     }
   ],
   "globalStyle": {

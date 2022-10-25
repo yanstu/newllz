@@ -3,6 +3,8 @@ export default [
     text: '添加代表',
     icon: 'add-o',
     badge: 0,
+    url: '',
+    color: '#1989fa',
   },
   {
     text: '编辑代表信息',

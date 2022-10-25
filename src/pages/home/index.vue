@@ -44,7 +44,6 @@
         >
           <van-grid-item
             class="body-grid-item"
-            style="background: transparent"
             :key="item"
             v-for="item in funcList"
             :icon="item.icon"

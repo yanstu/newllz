@@ -9,14 +9,8 @@ export default [
     text: '代表公示',
     needLogin: true,
     icon: require('../../static/images/home/代表公示logo.png'),
-    url: '',
+    url: '/pages/lvzhi/dbgs/index',
   },
-  /*{
-    text: '视频连线',
-    needLogin: true,
-    icon: require('../../static/images/home/视频logo.png'),
-    url: '',
-  },*/
   {
     text: '社情民意',
     needLogin: true,
@@ -27,7 +21,7 @@ export default [
     text: '人大动态',
     needLogin: true,
     icon: require('../../static/images/home/动态logo.png'),
-    url: '',
+    url: '/pages/lianluo/rddt/index',
   },
   /*{
     text: '建议办理',
