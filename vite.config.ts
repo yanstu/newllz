@@ -50,6 +50,11 @@ export default ({ mode }: ConfigEnv): UserConfig => {
           rewrite: (path) => path.replace(/^\/upload/, ''),
         },
       },
+      /*hmr: {
+        protocol: '/^\//',
+        host: '127.0.0.1',
+        clientPort: 10102
+      },*/
     },
     css: {
       preprocessorOptions: {

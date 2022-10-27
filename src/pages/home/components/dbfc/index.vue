@@ -24,21 +24,19 @@
 <script setup lang="ts">
 const dataList = ref([
   {
-    banner:
-      'http://www.gzrd.gov.cn/uploadfiles/202108/18/2021081809392129980345.jpg',
+    banner: require('./1.jpg'),
     title: '黔西市人大代表杨威：热情为民服务 倾心履职尽责',
     date: '2021-08-18 16:49',
   },
   {
-    banner:
-      'http://www.gzrd.gov.cn/uploadfiles/202108/17/2021081709364078798353.jpg',
+    banner: require('./2.jpg'),
     title: '毕节市人大代表赵玲：用心为民办实事',
     date: '2021-08-17 16:49',
   },
   {
-    banner:
-      'http://www.gzrd.gov.cn/uploadfiles/202203/05/2022030514474723036400-thumbnail.png',
-    title: '全国人大代表、贵州航天天马机电科技有限公司材料成型部有色金属焊接班班长姜涛：弘扬工匠精神 深耕工匠文化',
+    banner: require('./3.png'),
+    title:
+      '全国人大代表、贵州航天天马机电科技有限公司材料成型部有色金属焊接班班长姜涛：弘扬工匠精神 深耕工匠文化',
     date: '2021-08-16 16:49',
   },
 ]);

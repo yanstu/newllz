@@ -70,7 +70,7 @@
                 gutter="0"
                 clickable
                 :border="false"
-                :column-num="6"
+                :column-num="5"
                 icon-size="55"
               >
                 <van-grid-item

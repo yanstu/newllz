@@ -22,24 +22,20 @@
 <script setup lang="ts">
 const dataList = ref([
   {
-    banner:
-      'http://jgz.app.todayguizhou.com/data/upload/image/20221018/1666086726745459.jpg',
+    banner: require('./1.jpg'),
     title:
       '党的二十大贵州省代表团举行全体会议 学习贯彻习近平总书记在参加广西代表团讨论时的重要讲话精神',
   },
   {
-    banner:
-      'http://www.gzrd.gov.cn/uploadfiles/202210/20/2022102015400450545150-thumbnail.jpg',
+    banner: require('./2.jpg'),
     title: '慕德贵率队赴遵义市开展《中华人民共和国乡村振兴促进法》执法检查',
   },
   {
-    banner:
-      'http://www.gzrd.gov.cn/uploadfiles/202210/21/2022102115560930074913.jpg',
+    banner: require('./3.jpg'),
     title: '慕德贵在遵义市调研定点联系企业',
   },
   {
-    banner:
-      'http://www.gzrd.gov.cn/uploadfiles/202210/22/2022102216573792553650-thumbnail.jpg ',
+    banner: require('./4.jpg'),
     title: '慕德贵到正安县调研并看望省人大常委会机关驻村工作队',
   },
 ]);

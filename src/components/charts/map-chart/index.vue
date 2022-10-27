@@ -15,20 +15,23 @@ const chartEl = ref<HTMLDivElement | null>(null);
 import geo from './geo.json';
 
 const chartHeight = '500';
-const { setOption, showLoading } = useChart(chartEl as Ref<HTMLDivElement>, {
-  autoChartSize: true,
-  animation: {
-    enable: true,
-    styles: {
-      transition: 'all 2s',
+const { setOption, showLoading, IntervalMapShow } = useChart(
+  chartEl as Ref<HTMLDivElement>,
+  {
+    autoChartSize: true,
+    animation: {
+      enable: true,
+      styles: {
+        transition: 'all 2s',
+      },
     },
-  },
-  theme: ThemeType.Macarons,
-  registerMap: {
-    mapName: 'GUIZHOU',
-    geoJson: geo,
-  },
-});
+    theme: ThemeType.Macarons,
+    registerMap: {
+      mapName: 'GUIZHOU',
+      geoJson: geo,
+    },
+  }
+);
 let mapHandle = ((): {
   regionsData: AnyObject;
   MapRowsData: AnyObject;
@@ -104,7 +107,6 @@ let mapHandle = ((): {
       });
     }
   }
-  console.log('[ regionsData ] >', regionsData);
   return {
     regionsData,
     MapRowsData,
@@ -112,37 +114,53 @@ let mapHandle = ((): {
 })();
 
 const option = computed<EChartsOption>(() => ({
-  title: {
-    text: '石阡县人大代表网上联络站分布概况',
-    show: false,
-    left: '4%',
-    textStyle: {
-      //默认显示区域名称颜色
-      color: '#245454',
-      fontSize: '32rpx',
+  tooltip: {
+    trigger: 'item',
+    backgroundColor: 'RGBA(47,64,86,0.8)',
+    formatter: function (data) {
+      const info = data.data;
+      const docment = `<div style="width: auto;font-size: 26rpx;line-height: 34rpx;padding: 6rpx !important;padding-left: 10rpx !important;padding-right: 10rpx !important;color: #efe2e2;border-radius: 4px;background-color: rgba(32, 32, 32, 0.8) !important;">
+        <table border="1" borderColor="#8CE2F3" style="width: 60px;height:60px;border-collapse: collapse">
+          <tr>
+            <td colspan="6" style="height:20px;text-align: left;font-size:20rpx;font-weight: bold;padding-left: 5px;">${info.name}人大代表网上联络站</td>
+          </tr>
+        </table>
+      </div>`;
+      return docment;
+    },
+    position: function (point, params, dom, rect, size) {
+      var x = 0; // x坐标位置
+      var y = 0; // y坐标位置
+      var pointX = point[0];
+      var pointY = point[1];
+      var boxWidth = size.contentSize[0];
+      var boxHeight = size.contentSize[1];
+      if (boxWidth > pointX) {
+        x = 5;
+      } else {
+        x = pointX - boxWidth;
+      }
+      if (boxHeight > pointY) {
+        y = 5;
+      } else {
+        y = pointY - boxHeight;
+      }
+      return [x, y];
     },
   },
   geo: {
     regions: mapHandle.regionsData,
     zoom: 1.2,
-    zlevel: 3,
+    zlevel: -1,
     map: 'GUIZHOU',
     mapType: 'GUIZHOU',
     label: {
       normal: {
         fontSize: '32rpx',
         textStyle: {
-          //默认显示区域名称颜色
           color: '#000',
         },
         show: true,
-      },
-      //鼠标移入后查看效果
-      emphasis: {
-        fontSize: 10,
-        textStyle: {
-          color: '#000',
-        },
       },
     },
     itemStyle: {
@@ -150,8 +168,8 @@ const option = computed<EChartsOption>(() => ({
         borderWidth: 0,
       },
       emphasis: {
-        //areaColor: '#ffeb7b',//选中的颜色
-        borderWidth: 0,
+        areaColor: '#ffeb7b', //选中的颜色
+        borderWidth: 0.1,
       },
     },
   },
@@ -161,15 +179,11 @@ const option = computed<EChartsOption>(() => ({
   },
   series: [
     {
-      name: '贵州省联络站分布概况',
       type: 'map',
-      zoom: 1.2,
       zlevel: 1,
+      zoom: 1.2,
       map: 'GUIZHOU',
       mapType: 'GUIZHOU',
-      mapLocation: {
-        y: 100,
-      },
       backgroundColor: '#fff',
       itemStyle: {
         normal: {
@@ -177,10 +191,6 @@ const option = computed<EChartsOption>(() => ({
           borderColor: 'rgba(255,255,255,0.6)',
           borderWidth: 0,
           areaColor: {
-            type: 'radial',
-            x: 0.5,
-            y: 0.5,
-            r: 0.8,
             colorStops: [
               {
                 offset: 0,
@@ -193,32 +203,9 @@ const option = computed<EChartsOption>(() => ({
             ],
             globalCoord: false, // 缺省为 false
           },
-          shadowColor: 'rgba(255,255,255,0)',
-          shadowOffsetX: -2,
-          shadowOffsetY: 2,
-          shadowBlur: 0,
-        },
-        emphasis: {
-          areaColor: '#ffeb7b',
-          borderWidth: 0,
         },
       },
-      label: {
-        normal: {
-          fontSize: '32rpx',
-          textStyle: {
-            //默认显示区域名称颜色
-            color: '#000',
-          },
-          show: false,
-        },
-        //鼠标移入后查看效果
-        emphasis: {
-          fontSize: '32rpx',
-          show: false,
-        },
-        data: mapHandle.MapRowsData,
-      },
+      data: mapHandle.MapRowsData,
     },
   ],
 }));
@@ -227,6 +214,11 @@ const getData = async () => {
   showLoading();
   try {
     setOption(option.value);
+    try {
+      IntervalMapShow(option.value);
+    } catch (error) {
+      console.log(error);
+    }
   } catch {
     setOption({
       title: {

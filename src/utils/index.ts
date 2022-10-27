@@ -1,5 +1,6 @@
 import { isObject } from '@/utils/is';
 import pages from '@/pages.json';
+import manifest from '@/manifest.json';
 
 /**
  * 深度合并
@@ -21,7 +22,13 @@ export function deepMerge<T = any>(src: any = {}, target: any = {}): T {
  * @returns { string } 当前页面在pages.json中定义的标题
  */
 export function getCurrPageTitle(): string | undefined {
-  const currPath = location.pathname.substring(1);
+  const basePath = manifest.h5.router.base;
+  let substringIndex = 1;
+  if (manifest.h5.router.base) {
+    substringIndex =
+      location.pathname.indexOf(basePath + '/') + (basePath + '/').length;
+  }
+  const currPath = location.pathname.substring(substringIndex);
   const page = pages.pages.find((item) => item.path == currPath);
   return page?.style.navigationBarTitleText;
 }

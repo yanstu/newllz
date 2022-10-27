@@ -104,10 +104,45 @@ export default function useChart(
     window.removeEventListener('resize', resize);
   });
 
+  let currentMapIndex = 0;
+  let mapTimer = 0;
+  function IntervalMapShow(option: EChartsOption) {
+    if (!chartInstance) {
+      initCharts();
+    }
+    let seriesIndex = 0;
+    // @ts-ignore
+    const dataLen = option.series[seriesIndex].data.length;
+    // 取消之前高亮的图形
+    chartInstance?.dispatchAction({
+      type: 'downplay',
+      seriesIndex,
+      dataIndex: currentMapIndex,
+    });
+    currentMapIndex = (currentMapIndex + 1) % dataLen;
+    // 显示 tooltip
+    chartInstance?.dispatchAction({
+      type: 'showTip',
+      seriesIndex,
+      dataIndex: currentMapIndex,
+    });
+    // 高亮当前图形
+    chartInstance?.dispatchAction({
+      type: 'highlight',
+      seriesIndex,
+      dataIndex: currentMapIndex,
+    });
+    clearTimeout(mapTimer);
+    mapTimer = setTimeout(function () {
+      IntervalMapShow(option);
+    }, 1000);
+  }
+
   return {
     setOption,
     getInstance,
     showLoading,
     hideLoading,
+    IntervalMapShow,
   };
 }

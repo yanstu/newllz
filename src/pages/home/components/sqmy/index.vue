@@ -24,20 +24,18 @@
 <script setup lang="ts">
 const dataList = ref([
   {
-    banner:
-      'http://www.gzrd.gov.cn/uploadfiles/202209/05/2022090509551964538672.jpg',
+    banner: require('./1.jpg'),
     title: '黔东南州人大常委会执法检查组到丹寨县开展执法检查',
     date: '2022-09-05 16:49',
   },
   {
-    banner:
-      'http://www.gzrd.gov.cn/uploadfiles/202209/29/2022092909231811135833.jpg',
+    banner: require('./2.jpg'),
     title:
       '“我捐10吨蔬菜”“我捐17万现金”“我捐22万现金”...... 文正友等赫章县各级人大代表向抗疫一线捐款捐物',
     date: '2022-09-29 16:49',
   },
   {
-    banner: 'https://p6.itc.cn/q_70/images03/20221009/a4872880189c49dc97fc43619ebc0310.png',
+    banner: require('./3.png'),
     title: '贵州民政这十年|基层社会治理更加多元',
     date: '2022-09-12 16:49',
   },

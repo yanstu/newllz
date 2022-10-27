@@ -68,7 +68,7 @@
   "h5": {
     "router": {
       "mode": "history",
-      "base": "./"
+      "base": "webappYS"
     },
     "devServer": {
       "https": false
