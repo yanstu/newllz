@@ -1,9 +1,11 @@
 import { createSSRApp } from 'vue';
 import App from './App.vue';
 import { setupStore } from '@/state';
+
 import VConsole from 'vconsole';
-import 'vant/es/toast/style';
 // const vConsole = new VConsole();
+
+import 'vant/es/toast/style';
 
 export function createApp() {
   const app = createSSRApp(App);

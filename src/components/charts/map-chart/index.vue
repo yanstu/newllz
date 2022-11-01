@@ -118,7 +118,7 @@ const option = computed<EChartsOption>(() => ({
     trigger: 'item',
     backgroundColor: 'RGBA(47,64,86,0.8)',
     formatter: function (data) {
-      const info = data.data;
+      /*const info = data.data;
       const docment = `<div style="width: auto;font-size: 26rpx;line-height: 34rpx;padding: 6rpx !important;padding-left: 10rpx !important;padding-right: 10rpx !important;color: #efe2e2;border-radius: 4px;background-color: rgba(32, 32, 32, 0.8) !important;">
         <table border="1" borderColor="#8CE2F3" style="width: 60px;height:60px;border-collapse: collapse">
           <tr>
@@ -126,15 +126,15 @@ const option = computed<EChartsOption>(() => ({
           </tr>
         </table>
       </div>`;
-      return docment;
+      return docment;*/
     },
     position: function (point, params, dom, rect, size) {
-      var x = 0; // x坐标位置
-      var y = 0; // y坐标位置
-      var pointX = point[0];
-      var pointY = point[1];
-      var boxWidth = size.contentSize[0];
-      var boxHeight = size.contentSize[1];
+      let x = 0; // x坐标位置
+      let y = 0; // y坐标位置
+      let pointX = point[0];
+      let pointY = point[1];
+      let boxWidth = size.contentSize[0];
+      let boxHeight = size.contentSize[1];
       if (boxWidth > pointX) {
         x = 5;
       } else {

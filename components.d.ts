@@ -7,6 +7,8 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Dad: typeof import('./src/components/tabbar/lottie/dad.vue')['default']
+    Lottie: typeof import('./src/components/tabbar/lottie/index.vue')['default']
     MapChart: typeof import('./src/components/charts/map-chart/index.vue')['default']
     Navbar: typeof import('./src/components/navbar/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

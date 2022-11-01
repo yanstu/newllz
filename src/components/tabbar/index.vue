@@ -5,40 +5,58 @@
       <van-tabbar-item
         replace
         :to="item.pagePath"
-        :name="item.text"
-        v-for="item in tabbarList"
-        :key="item"
+        :name="index"
+        v-for="(item, index) in tabbarList"
+        :key="index"
       >
-        <span>{{ item.text }}</span>
         <template #icon="props">
-          <img :src="props.active ? item.selectedIconPath : item.iconPath" />
+          <lottie
+            :active="props.active"
+            :size="28"
+            :src="props.active ? item.selectedIconPath : item.iconPath"
+          ></lottie>
         </template>
+        <text>{{ item.text }}</text>
       </van-tabbar-item>
     </van-tabbar>
   </view>
 </template>
 
 <script setup lang="ts">
+import lottie from './lottie';
+const homeNotSelected = require('./assets/home-notselected.json');
+const homeSelected = require('./assets/home-selected.json');
+const lianluoNotSelected = require('./assets/lianluo-notselected.json');
+const lianluoSelected = require('./assets/lianluo-selected.json');
+const meNotSelected = require('./assets/me-notselected.json');
+const meSelected = require('./assets/me-selected.json');
 const active = ref(0);
 
-const tabbarList = [
+interface tabbarItem {
+  pagePath: string;
+  text: string;
+  iconPath: JSON;
+  selectedIconPath: JSON;
+}
+
+const tabbarList: Array<tabbarItem> = [
   {
     pagePath: '/pages/home/index',
     text: '首页',
-    iconPath: require('@img/tabBar/home.png'),
-    selectedIconPath: require('@img/tabBar/home1.png'),
+    iconPath: homeNotSelected,
+    selectedIconPath: homeSelected,
   },
   {
     pagePath: '/pages/llz/index',
     text: '联络站',
-    iconPath: require('@img/tabBar/llz.png'),
-    selectedIconPath: require('@img/tabBar/llz1.png'),
+    iconPath: lianluoNotSelected,
+    selectedIconPath: lianluoSelected,
   },
   {
     pagePath: '/pages/me/index',
     text: '我的',
-    iconPath: require('@img/tabBar/me.png'),
-    selectedIconPath: require('@img/tabBar/me1.png'),
+    iconPath: meNotSelected,
+    selectedIconPath: meSelected,
   },
 ];
 </script>
