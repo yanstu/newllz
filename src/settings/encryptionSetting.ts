@@ -17,3 +17,4 @@ export const cacheCipher = {
 
 // 什么时候启用缓存加密
 export const enableStorageEncryption = !isDevMode();
+// export const enableStorageEncryption = true;

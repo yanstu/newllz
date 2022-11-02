@@ -4,7 +4,11 @@
     <view class="home-head">
       <view class="head-search">
         <view class="search-bar">
-          <van-icon class="search-icon" name="search" />
+          <van-icon
+            @click="vconsole.clickSwitch()"
+            class="search-icon"
+            name="search"
+          />
           <input
             class="search-input"
             v-model="searchValue"
@@ -76,6 +80,7 @@ import changzhuList, { changzhu } from './changzhuList';
 import tabbar from '@/components/tabbar';
 import { Toast } from 'Vant';
 import mapChart from '@/components/charts/map-chart';
+import vconsole from '@/utils/vconsole';
 
 const searchValue = ref('');
 const themeVars = ref({
